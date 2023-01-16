@@ -26,16 +26,18 @@ export default function Home() {
       <main className='px-10 font-inter'>
 
         {/* Navbar */}
-        <nav className='flex justify-between py-10 '>
-          <h1 className='font-pixel text-base'>ALFARIZI</h1>
-          <ul className='flex items-center'>
-            <li className='cursor-pointer text-gray-800 hover:text-violet-800 active:text-violet-500'><BsFillMoonStarsFill size={20} /></li>
-            <li><a href="#" className='bg-gradient-to-r from-blue-600 to-teal-600 ml-5 p-2 text-gray-200 rounded-lg hover:from-blue-700 hover:to-teal-700 active:from-blue-900 active:to-teal-900'>Resume</a></li>
-          </ul>
+        <nav className='relative'>
+          <div className='fixed top-0 left-0 right-0 flex justify-between px-10 sm:px-40 py-7 backdrop-blur-sm bg-white/30 duration-200'>
+            <h1 className='font-pixel text-base'>ALFARIZI</h1>
+            <ul className='flex items-center'>
+              <li className='cursor-pointer text-gray-800 hover:text-violet-800 active:text-violet-500'><BsFillMoonStarsFill size={20} /></li>
+              <li><a href="#" className='bg-gradient-to-r from-blue-600 to-teal-600 ml-5 p-2 text-gray-200 rounded-lg hover:from-blue-700 hover:to-teal-700 active:from-blue-900 active:to-teal-900'>Resume</a></li>
+            </ul>
+          </div>
         </nav>
 
         {/* Introduction about myself */}
-        <section className='min-h-screen'>
+        <section className='my-40'>
           <div className='my-10 text-center'>
             <h2 className='text-3xl sm:text-5xl font-bold'>Moh Rizal Alfarizi</h2>
             <h3 className='text-lg font-semibold'>Physicist and Developer</h3>
@@ -50,6 +52,13 @@ export default function Home() {
           <div className='py-1 mx-auto max-w-[250px] max-h-[250px] bg-gradient-to-b from-cyan-600 to-teal-900 rounded-full overflow-hidden'>
             <Image src={MyPhoto} />
           </div>
+        </section>
+
+        {/* More information */}
+        <section className='mx-auto max-w-xl'>
+          <h3 className='text-center font-semibold text-2xl py-3'>Services I Offer</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure <span className='text-teal-800 font-semibold'>veritatis</span> omnis minima quo deserunt voluptas.</p>
+          <p>Officia quibusdam a nisi porro, eaque at ab eligendi autem maiores <span className='text-teal-800 font-semibold'>voluptates</span> quaerat similique id.</p>
         </section>
 
 
