@@ -1,12 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-import { BsFillMoonStarsFill } from 'react-icons/bs'
+import Head from 'next/head';
+import Image from 'next/image';
+import { Inter } from '@next/font/google';
+import styles from '@/styles/Home.module.css';
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { AiFillLinkedin, AiFillInstagram, AiFillYoutube, AiFillGithub } from 'react-icons/ai';
+import MyPhoto from '../../public/my-photos.png';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const hoverTextStyle = "hover:text-violet-800";
+
   return (
     <>
       <Head>
@@ -18,16 +22,39 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Press+Start+2P&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
       </Head>
+
       <main className='px-10 font-inter'>
+
+        {/* Navbar */}
+        <nav className='flex justify-between py-10 '>
+          <h1 className='font-pixel text-base'>ALFARIZI</h1>
+          <ul className='flex items-center'>
+            <li className='cursor-pointer text-gray-800 hover:text-violet-800 active:text-violet-500'><BsFillMoonStarsFill size={20} /></li>
+            <li><a href="#" className='bg-gradient-to-r from-blue-600 to-teal-600 ml-5 p-2 text-gray-200 rounded-lg hover:from-blue-700 hover:to-teal-700 active:from-blue-900 active:to-teal-900'>Resume</a></li>
+          </ul>
+        </nav>
+
+        {/* Introduction about myself */}
         <section className='min-h-screen'>
-          <nav className='flex justify-between py-10 '>
-            <h1 className='font-pixel text-base'>ALFARIZI</h1>
-            <ul className='flex items-center'>
-              <li className='cursor-pointer text-gray-800 hover:text-violet-800'><BsFillMoonStarsFill size={20} /></li>
-              <li><a href="#" className='bg-gradient-to-r from-blue-500 to-teal-500 mx-5 p-2 text-gray-200 rounded-lg hover:from-blue-700 hover:to-teal-700'>Resume</a></li>
-            </ul>
-          </nav>
+          <div className='my-10 text-center'>
+            <h2 className='text-3xl sm:text-5xl font-bold'>Moh Rizal Alfarizi</h2>
+            <h3 className='text-lg font-semibold'>Physicist and Developer</h3>
+            <p className='my-3 leading-normal text-sm mx-auto max-w-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti autem, corrupti, magni facilis voluptas fugit assumenda fugiat suscipit velit voluptatibus, illum totam!</p>
+            <div className='pt-5 flex text-3xl justify-center content-center gap-10'>
+              <a className='hover:text-violet-800 active:text-violet-500' href="#"><AiFillLinkedin /></a>
+              <a className='hover:text-violet-800 active:text-violet-500' href="#"><AiFillInstagram /></a>
+              <a className='hover:text-violet-800 active:text-violet-500' href="#"><AiFillGithub /></a>
+              <a className='hover:text-violet-800 active:text-violet-500' href="#"><AiFillYoutube /></a>
+            </div>
+          </div>
+          <div className='py-1 mx-auto max-w-[250px] max-h-[250px] bg-gradient-to-b from-cyan-600 to-teal-900 rounded-full overflow-hidden'>
+            <Image src={MyPhoto} />
+          </div>
         </section>
+
+
+        <div className='h-screen'>
+        </div>
       </main>
     </>
   )
