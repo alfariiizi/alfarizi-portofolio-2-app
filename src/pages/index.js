@@ -27,7 +27,7 @@ export default function Home() {
 
         {/* Navbar */}
         <nav className='relative'>
-          <div className='fixed top-0 left-0 right-0 flex justify-between px-10 sm:px-40 py-7 backdrop-blur-sm bg-white/30 duration-200'>
+          <div className='fixed top-0 left-0 right-0 flex justify-between px-10 sm:px-20 md:px-30 lg:px-40 py-7 backdrop-blur-sm bg-white/30 duration-200'>
             <h1 className='font-pixel text-base'>ALFARIZI</h1>
             <ul className='flex items-center'>
               <li className='cursor-pointer text-gray-800 hover:text-violet-800 active:text-violet-500'><BsFillMoonStarsFill size={20} /></li>
@@ -37,7 +37,7 @@ export default function Home() {
         </nav>
 
         {/* Introduction about myself */}
-        <section className='my-40'>
+        <section className='mt-36'>
           <div className='my-10 text-center'>
             <h2 className='text-3xl sm:text-5xl font-bold'>Moh Rizal Alfarizi</h2>
             <h3 className='text-lg font-semibold'>Physicist and Developer</h3>
@@ -55,10 +55,12 @@ export default function Home() {
         </section>
 
         {/* More information */}
-        <section className='mx-auto max-w-xl'>
-          <h3 className='text-center font-semibold text-2xl py-3'>Services I Offer</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure <span className='text-teal-800 font-semibold'>veritatis</span> omnis minima quo deserunt voluptas.</p>
-          <p>Officia quibusdam a nisi porro, eaque at ab eligendi autem maiores <span className='text-teal-800 font-semibold'>voluptates</span> quaerat similique id.</p>
+        <section className='mt-20 mx-auto max-w-4xl sm:flex justify-center gap-10 items-center shadow-2xl border-4 border-y-indigo-800 border-x-transparent sm:border-x-indigo-800 sm:border-y-transparent p-5 rounded-2xl transition'>
+          <h3 className='text-center font-semibold text-2xl sm:text-3xl py-3'>Services I Offer</h3>
+          <div className='flex flex-col gap-2 justify-between items-center'>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure <span className='text-teal-800 font-semibold'>veritatis</span> omnis minima quo deserunt voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nulla facilis modi quos, placeat, nihil a repellendus expedita ipsum officia sequi nam dicta corporis provident ducimus dolorem nobis aut ullam?</p>
+            <p>Officia quibusdam a nisi porro, eaque at ab eligendi autem maiores <span className='text-teal-800 font-semibold'>voluptates</span> quaerat similique id. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, commodi dignissimos? Facilis corporis repellat ipsum dignissimos aspernatur. Recusandae, error rem libero iure tenetur quod debitis sint? Iure quisquam repellendus nemo!</p>
+          </div>
         </section>
 
 
