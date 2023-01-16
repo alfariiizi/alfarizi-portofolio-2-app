@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .skill-card {
+    @apply p-3 shadow-slate-700 shadow-lg mx-auto flex flex-col justify-between items-center gap-5 w-48 h-48 rounded-lg bg-slate-200 hover:bg-gray-300
+  }
+}

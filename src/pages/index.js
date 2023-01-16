@@ -5,11 +5,18 @@ import styles from '@/styles/Home.module.css';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { AiFillLinkedin, AiFillInstagram, AiFillYoutube, AiFillGithub } from 'react-icons/ai';
 import MyPhoto from '../../public/my-photos.png';
+import CProgrammingLogo from '../../public/c-programming.png'
+import CppLogo from '../../public/cpp.png'
+import JavascriptLogo from '../../public/javascript.png'
+import PythonLogo from '../../public/python.png'
+import PandasLogo from '../../public/pandas.png'
+import MatplotlibLogo from '../../public/matplotlib.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const hoverTextStyle = "hover:text-violet-800";
+  const strongTextStyle = "text-blue-700 font-bold";
 
   return (
     <>
@@ -27,7 +34,7 @@ export default function Home() {
 
         {/* Navbar */}
         <nav className='relative'>
-          <div className='fixed top-0 left-0 right-0 flex justify-between px-10 sm:px-20 md:px-30 lg:px-40 py-7 backdrop-blur-sm bg-white/30 duration-200'>
+          <div className='fixed top-0 left-0 right-0 flex justify-between px-10 sm:px-20 md:px-30 lg:px-40 py-7 backdrop-blur-sm bg-gradient-to-r from-blue-200/30 to-violet-200/30 duration-200'>
             <h1 className='font-pixel text-base'>ALFARIZI</h1>
             <ul className='flex items-center'>
               <li className='cursor-pointer text-gray-800 hover:text-violet-800 active:text-violet-500'><BsFillMoonStarsFill size={20} /></li>
@@ -56,13 +63,69 @@ export default function Home() {
 
         {/* More information */}
         <section className='mt-20 mx-auto max-w-4xl sm:flex justify-center gap-10 items-center shadow-2xl border-4 border-y-indigo-800 border-x-transparent sm:border-x-indigo-800 sm:border-y-transparent p-5 rounded-2xl transition'>
-          <h3 className='text-center font-semibold text-2xl sm:text-3xl py-3'>Services I Offer</h3>
+          <h3 className='text-center font-pixel text-lg sm:text-xl py-3'>SERVICES I OFFER</h3>
           <div className='flex flex-col gap-2 justify-between items-center'>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure <span className='text-teal-800 font-semibold'>veritatis</span> omnis minima quo deserunt voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nulla facilis modi quos, placeat, nihil a repellendus expedita ipsum officia sequi nam dicta corporis provident ducimus dolorem nobis aut ullam?</p>
-            <p>Officia quibusdam a nisi porro, eaque at ab eligendi autem maiores <span className='text-teal-800 font-semibold'>voluptates</span> quaerat similique id. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, commodi dignissimos? Facilis corporis repellat ipsum dignissimos aspernatur. Recusandae, error rem libero iure tenetur quod debitis sint? Iure quisquam repellendus nemo!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure <span className={strongTextStyle}>veritatis</span> omnis minima quo deserunt voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nulla facilis modi quos, placeat, nihil a repellendus expedita ipsum officia sequi nam dicta corporis provident ducimus dolorem nobis aut ullam?</p>
+            <p>Officia quibusdam a nisi porro, eaque at ab eligendi autem maiores <span className={strongTextStyle}>voluptates</span> quaerat similique id. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, commodi dignissimos? Facilis corporis repellat ipsum dignissimos aspernatur. Recusandae, error rem libero iure tenetur quod debitis sint? Iure quisquam repellendus nemo!</p>
           </div>
         </section>
 
+        {/* Skills */}
+        <section className='mt-20'>
+          <h3 className='text-center font-pixel text-lg sm:text-xl'>
+            Tools that I Use
+          </h3>
+          <div className='m-8 grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between items-center gap-4 duration-200'>
+            <div className='skill-card'>
+              <Image src={CProgrammingLogo} width={100}/>
+              <h4 className='font-semibold'>C-Programming</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={CppLogo} width={100}/>
+              <h4 className='font-semibold'>C++</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={JavascriptLogo} width={100}/>
+              <h4 className='font-semibold'>Javascript</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={PythonLogo} width={100}/>
+              <h4 className='font-semibold'>Python</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={MatplotlibLogo} width={100}/>
+              <h4 className='font-semibold'>Matplotlib</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={PandasLogo} width={80}/>
+              <h4 className='font-semibold'>Pandas</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={CProgrammingLogo} width={100}/>
+              <h4 className='font-semibold'>C-Programming</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={CppLogo} width={100}/>
+              <h4 className='font-semibold'>C++</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={JavascriptLogo} width={100}/>
+              <h4 className='font-semibold'>Javascript</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={CProgrammingLogo} width={100}/>
+              <h4 className='font-semibold'>C-Programming</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={CppLogo} width={100}/>
+              <h4 className='font-semibold'>C++</h4>
+            </div>
+            <div className='skill-card'>
+              <Image src={JavascriptLogo} width={100}/>
+              <h4 className='font-semibold'>Javascript</h4>
+            </div>
+          </div>
+        </section>
 
         <div className='h-screen'>
         </div>
